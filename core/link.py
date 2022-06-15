@@ -1,7 +1,9 @@
 from configparser import ConfigParser
+from importlib.resources import path
 import psycopg
 from simple_salesforce import Salesforce
 import json
+import os
 
 class link:
 
@@ -11,12 +13,19 @@ class link:
 
 
     def config(section, filename='database.ini'):
+
+        # Find parent directory
+        path = os.path.realpath(__file__)
+        dir = os.path.dirname(path)
+        dir = dir.replace('core','')
+
         # create a parser
         parser = ConfigParser()
-        # read config file
-        parser.read(filename)
 
-        # get section, default to postgresql
+        # Read ini file
+        parser.read(dir + filename)
+
+        # get section
         db = {}
         if parser.has_section(section):
             params = parser.items(section)

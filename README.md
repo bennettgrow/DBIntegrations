@@ -2,11 +2,14 @@
  Tools created for Innovasia Inc. and DESIGNBOX to integrate their CRM and external databases.
 
 ## Supports
-- PostgreSQL integration using psycopg
-- Salesforce integration using their REST API
+- PostgreSQL integration via psycopg
+- Salesforce integration via simple_salesforce
 
- ## Setup
-Connections to the supported databases require login information in *database.ini* that must be formatted similarly to:
+## Requirements
+- Python 3.5+
+- simple_salesforce
+- pyscopg
+- *database.ini* file in root dir. that must be formatted similarly to:
 ```
 [salesforce]
 username=user@email.com

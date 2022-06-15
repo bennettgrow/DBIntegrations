@@ -1,4 +1,5 @@
-from link import link
+from .tests.context import core
+from core.link import link
 
 # Initialize salesforce and postgresql objects
 # These usually are passed into link query functions
