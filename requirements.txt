@@ -1,2 +1,3 @@
 simple_salesforce
 pyscopg
+pandas

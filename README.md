@@ -4,11 +4,13 @@
 ## Supports
 - PostgreSQL integration via psycopg
 - Salesforce integration via simple_salesforce
+- Includes a terminal based console to send queries and save them as .CSVs
 
 ## Requirements
 - Python 3.5+
 - simple_salesforce
 - pyscopg
+- pandas
 - *database.ini* file in root dir. that must be formatted similarly to:
 ```
 [salesforce]
