@@ -1,8 +1,6 @@
 from configparser import ConfigParser
-from importlib.resources import path
 import psycopg
-from simple_salesforce import Salesforce
-import json
+from simple_salesforce import Salesforce, SalesforceLogin
 import os
 
 
@@ -50,9 +48,11 @@ def connect(section):
         except (Exception, psycopg.DatabaseError) as error:
             print(error)
         
-    """ Connect with the Salesforce REST API """
+    """ Connect with Salesforce """
     if section == "salesforce":
         print('Connecting to the Salesforce database...')
         conn = Salesforce(**params)
+        #s_id, inst = SalesforceLogin(**params)
+        #conn = Salesforce(instance=inst, session_id=s_id)
 
     return conn

@@ -38,12 +38,12 @@ class console(cmd.Cmd):
         'Close this session'
         return True
 
-    def emptyline(self):
-        print("Type help or ? for commands.")
+    #def emptyline(self):
+    #    print("Type help or ? for commands.")
     
-    def default(self, line):
-        print("Command" + line + " is not known.")
-        self.onecmd('emptyline')
+    #def default(self, line):
+    #    print("Command" + line + " is not known.")
+    #    self.onecmd('emptyline')
 
 
 if __name__ == '__main__':

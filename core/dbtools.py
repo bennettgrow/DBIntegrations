@@ -32,6 +32,22 @@ class dbtools:
         except (Exception, psycopg.DatabaseError) as error:
             print(error)
 
+    def pg_single_insert(insert_req):
+        """ Single line INSERT request """
+        try:
+            pg = link.connect('postgresql')
+            cur = pg.cursor()
+            cur.execute(insert_req)
+            pg.commit()
+        except (Exception, psycopg.DatabaseError) as error:
+            print(error)
+            pg.rollback()
+            cur.close()
+            return 1
+        cur.close()
+        pg.close()
+        
+
 
     def sf_query(SOQL):
         try:

@@ -24,3 +24,4 @@ dbname=postgresql
 user=myname
 password=pa55w0rd
 ```
+To generate a Salesforce security token, log in to Salesforce then click your avatar at the top right of the screen. Select *Settings*, then navigate to *Reset Security Token* on the left side. 
