@@ -1,5 +1,7 @@
 # InnoIntegrations
  Tools created for Innovasia Inc. and DESIGNBOX to integrate their CRM and external databases.
+ 
+ In current state, running *console.py* provides an interactive terminal-based system to query a PostgreSQL database or Salesforce.
 
 ## Supports
 - PostgreSQL integration via psycopg
