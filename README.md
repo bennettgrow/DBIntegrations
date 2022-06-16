@@ -3,10 +3,10 @@
  
  In current state, running *console.py* provides an interactive terminal-based system to query a PostgreSQL database or Salesforce.
 
-## Supports
+## Features
 - PostgreSQL integration via psycopg
 - Salesforce integration via simple_salesforce
-- Includes a terminal based console to send queries and save them as .CSVs
+- Includes a terminal based console to send queries preview the results, and save them as .CSVs
 
 ## Requirements
 - Python 3.5+
